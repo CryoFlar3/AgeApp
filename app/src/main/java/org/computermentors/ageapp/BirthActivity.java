@@ -13,6 +13,9 @@ public class BirthActivity extends AppCompatActivity {
 
     private TextView mAgeTextView;
     private String mDate;
+    private int mYear;
+    private int mMonth;
+    private int mDay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,8 +37,12 @@ public class BirthActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         mDate = intent.getStringExtra("Birth");
+        mYear = intent.getIntExtra("Year", 0);
+        mMonth = intent.getIntExtra("Month", 0);
+        mDay = intent.getIntExtra("Day", 0);
 
-        mAgeTextView.setText(mDate);
+
+        mAgeTextView.setText("Your birth date is " + mDate + ". You are " + mYear + " years, " + mMonth + " months, and " + mDay + " days old!");
     }
 
 }

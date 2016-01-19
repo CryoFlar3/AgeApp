@@ -80,7 +80,7 @@ public class Calculate {
         Calendar dob = Calendar.getInstance();
         dob.setTime(date);
         Calendar today = Calendar.getInstance();
-        int age = today.get(Calendar.DATE) - dob.get(Calendar.DATE);
+        int age = today.get(Calendar.DAY_OF_YEAR) - dob.get(Calendar.DAY_OF_YEAR);
 
 
         return age;
